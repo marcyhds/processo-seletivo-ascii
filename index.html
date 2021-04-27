@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/logoimagem-semfundo 1.png" type="image/x-icon"> 
+    <title>Processo Seletivo ASCII</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cab">
+        <div class="imagem">
+            <img src="imagens/logoimagem-semfundo 1.png" alt="logo ASCII" width="50px" height="50px">
+        </div>
+        <div class="texto">
+            <p>
+                <a href="#sobrevoce">Sobre você</a>  
+                <a href="#conhecimentos">Conhecimentos</a>  
+                <a href="#contato">Contato</a>
+            </p>
+        </div>
+    </div>
+
+    <section id="sobrevoce">
+    
+    <div class="sobrevc">
+        <h1>Sobre você</h1>
+        <div class="imagem">
+            <img src="imagens/rostomarcela.png" alt="foto de rosto" width="100px" height="100px">
+        </div>
+        <div class="texto"> 
+            <p>Meu nome é Marcela Neves Belchior e sou graduanda em Ciência da Computação na Universidade Federal de Uberlândia (UFU). Busco experiência na área de tecnologia da informação. Tenho grande interesse em todos os processos que envolvem o desenvolvimento de um software/site, mas ainda não sei aplicar responsividade.</p>   
+        </div>
+    </div>
+    </section>
+    
+    <section id="conhecimentos">
+    <h1 align=center >Conhecimentos</h1>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'educacao')" id="defaultOpen"> <b>Educação</b> </button>
+        <button class="tablinks" onclick="openTab(event, 'habilidades')"> <b>Habilidades</b> </button>
+        <button class="tablinks" onclick="openTab(event, 'softskills')"> <b>Soft Skills</b> </button>
+    </div>
+    <div id="educacao" class="tabcontent">
+        <p>
+            <ul>
+                <li>> Cursando Ciência da Computação na UFU - 6º período</li>
+                <li>> Inglês avançado (com certificado)</li>
+            </ul>
+        </p>
+    </div>
+          
+    <div id="habilidades" class="tabcontent">
+        <p>
+            <ul>
+                <li>> Lógica de programação</li>
+                <li>> Linguagem C</li>
+                <li>> Conhecimento básico em Banco de Dados</li>
+                <li>> Conhecimento básico com Java</li>
+            </ul>
+        </p>
+    </div>
+          
+    <div id="softskills" class="tabcontent">
+        <p>
+            <ul>
+                <li>> Trabalho em equipe</li>
+                <li>> Aprendizado rápido</li>
+                <li>> Dedicação</li>
+            </ul>
+        </p>
+    </div>
+    </section>
+    
+    <section id="contato">
+    <div class="cont">
+        <h1>Contato</h1>
+        <div class="conteudo">
+            <div class="imagem"> <img src="imagens/agenda 1.png" alt="agenda" width="100px" height="100px"> </div>
+            <div class="texto">
+                <ul>
+                    <li>Email: </li>
+                    <li>Telefone: </li>
+                    <li>LinkedIn: </li>
+                    <li>...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="rodape">
+        <div class="rp">
+            <p>Desenvolvido com <img src="imagens/heart 1.svg" alt="coraçãozinho" width="20px" height="20px"> por Marcela</p>
+        </div>
+    </section>
+
+    <script> 
+        document.getElementById("defaultOpen").click();
+        function openTab(evt, co) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(co).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+     
+</body>
+</html>
